@@ -87,3 +87,6 @@ php artisan make:table AccountManagement/AccountIncome/AccountLog  [account_expe
 php artisan make:table AccountManagement/AccountExpense/AccountLog  [account_expense_id:bigint,account_income_id:bigint,account_category_id:bigint,type:enum-income.expense,title:string-100,amount:bigint,description:text,details:json] --model
 
 
+php artisan make:module Testing [title:string-200,type:enum-income.expense,description:text,picture:string-200]
+
+php artisan make:module ProductManagement/ProductCategory [title:string-100,parent_id:int] --vue

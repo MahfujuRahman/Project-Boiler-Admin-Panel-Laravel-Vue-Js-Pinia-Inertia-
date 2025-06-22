@@ -27,17 +27,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            /**
-             * User seeder management.
-             */
             RoleSeeder::class,
             UserSeeder::class,
             WebsiteSettingsSeeder::class,
-            /**
-             * Suppliyer seeder management.
-             */
-            BlogCategorySeeder::class
-
+            
         ]);
     }
 }

@@ -2,15 +2,8 @@
   <!--Start sidebar-wrapper-->
   <div id="sidebar-wrapper">
     <div class="brand-logo">
-      <router-link
-        :to="{ name: `adminDashboard` }"
-        class="d-flex align-items-center"
-      >
-        <img
-          :src="`${get_setting_value('image') ?? 'avatar.png'} `"
-          class="logo-icon"
-          alt="logo icon"
-        />
+      <router-link :to="{ name: `adminDashboard` }" class="d-flex align-items-center">
+        <img :src="`${get_setting_value('image') ?? 'avatar.png'} `" class="logo-icon" alt="logo icon" />
         <h5 class="logo-text">Super Admin Panel</h5>
       </router-link>
       <div class="close-btn">
@@ -19,24 +12,14 @@
     </div>
 
     <div class="text-center mt-3">
-      <img
-        class="rounded-circle p-1"
-        height="70"
-        width="70"
-        :src="`${auth_info.image ?? 'avatar.png'}`"
-        alt=""
-      />
+      <img class="rounded-circle p-1" height="70" width="70" :src="`${auth_info.image ?? 'avatar.png'}`" alt="" />
       <p class="mt-2">Mr. {{ auth_info.name }}</p>
     </div>
     <hr />
     <ul class="metismenu" id="menu">
       <!-- <li class="menu-label">Management</li> -->
       <li>
-        <router-link
-          :to="{ name: `adminDashboard` }"
-          class="border"
-          href="javascript:void();"
-        >
+        <router-link :to="{ name: `adminDashboard` }" class="border" href="javascript:void();">
           <div class="parent-icon">
             <i class="zmdi zmdi-view-dashboard"></i>
           </div>
@@ -44,32 +27,26 @@
         </router-link>
       </li>
       <!-- Management start -->
-      <side-bar-drop-down-menus
-        :icon="`fa fa-plus`"
-        :menu_title="`User Management`"
-        :menus="[
-          {
-            route_name: `AllUser`,
-            title: `User`,
-            icon: `zmdi zmdi-dot-circle-alt`,
-          },
-        ]"
-      />
+      <side-bar-drop-down-menus :icon="`fa fa-plus`" :menu_title="`User Management`" :menus="[
+        {
+          route_name: `AllUser`,
+          title: `User`,
+          icon: `zmdi zmdi-dot-circle-alt`,
+        },
+      ]" />
 
-      <side-bar-drop-down-menus
-        :icon="`fa fa-plus`"
-        :menu_title="`Blog Management`"
-        :menus="[
-          {
-            route_name: `AllBlogCategory`,
-            title: `Blog Category`,
-            icon: `zmdi zmdi-dot-circle-alt`,
-          },
-        ]"
-      />
+      <side-bar-drop-down-menus :icon="`fa fa-plus`" :menu_title="`Blog Management`" :menus="[
+        {
+          route_name: `AllBlogCategory`,
+          title: `Blog Category`,
+          icon: `zmdi zmdi-dot-circle-alt`,
+        },
+      ]" />
 
-      <side-bar-single-menu :icon="`fa fa-plus`" :menu_title="`TestOneThree`"  :route_name="`AllTestOneThree`" />
-<!-- Management end -->
+      <side-bar-single-menu :icon="`fa fa-plus`" :menu_title="`TestOneThree`" :route_name="`AllTestOneThree`" />
+      <side-bar-single-menu :icon="`fa fa-plus`" :menu_title="`ProductCategory`" :route_name="`AllProductCategory`" />
+      <side-bar-single-menu :icon="`fa fa-plus`" :menu_title="`Testing`" :route_name="`AllTesting`" />
+      <!-- Management end -->
     </ul>
   </div>
 </template>

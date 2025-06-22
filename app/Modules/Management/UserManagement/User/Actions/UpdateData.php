@@ -8,6 +8,7 @@ class UpdateData
 
     public static function execute($request, $slug)
     {
+       
         try {
 
             if (!$data = self::$model::query()->where('slug', $slug)->first()) {
